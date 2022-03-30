@@ -263,8 +263,10 @@ def ensure_treasury_data(symbol, first_date, last_date, now, environ=None):
 
     data = _load_cached_data(filename, first_date, last_date, now, 'treasury',
                              environ)
-    if data is not None:
-        return data
+
+    # FIXME: use my own benchmark
+    # if data is not None:
+    #     return data
 
     # If no cached data was found or it was missing any dates then download the
     # necessary data.
